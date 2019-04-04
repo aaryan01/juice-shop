@@ -1,0 +1,28 @@
+{
+  "username": "n.a.",
+  "email": "aaryanbudhiraja2@gmail.com",
+  "orders": [
+    {
+      "orderId": "f744-654aec54d9883d60",
+      "totalPrice": 2.88,
+      "products": [
+        {
+          "quantity": 1,
+          "name": "Apple Juice (1000ml)",
+          "price": 1.99,
+          "total": 1.99,
+          "bonus": 0
+        },
+        {
+          "quantity": 1,
+          "name": "Apple Pomace",
+          "price": 0.89,
+          "total": 0.89,
+          "bonus": 0
+        }
+      ],
+      "bonus": 0,
+      "eta": "1"
+    }
+  ]
+}

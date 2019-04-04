@@ -19,11 +19,13 @@ html(lang='en')
                             span.glyphicon.glyphicon-arrow-left
                             |  Back
         .container
-            h3 User Profile 
+            h3 User Profile
             .row(style='margin-top:10%;')
                 .col-sm-5
                     img.img-rounded(src='assets/public/images/uploads/' + profileImage, alt='Cinque Terre', width='304', height='236')
                     p(style='padding-left:25%;margin-top:8%;') _username_
+                    form(action='/rest/exportProfile', style='margin-top:5%', method='post')
+                        button(id='submitUrl', type='submit').btn.btn-default Export My Data
                     form(action='/profile/image/file' , style='margin-top:10%;', method='post', enctype='multipart/form-data')
                         .form-group
                             input(type='file', accept='image/*', name='file')

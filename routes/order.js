@@ -69,10 +69,6 @@ module.exports = function placeOrder () {
           doc.moveDown()
           doc.font('Helvetica-Bold', 15).text('Bonus Points Earned: ' + totalPoints)
           doc.font('Times-Roman', 15).text('(You will be able to these points for amazing bonuses in the future!)')
-<<<<<<< HEAD
-          doc.text('Total Price: ' + totalPrice)
-=======
->>>>>>> b2ca8175ef2392d4ce8465e0ff0cadb409d8ef19
           doc.moveDown()
           doc.moveDown()
           doc.font('Times-Roman', 15).text('Thank you for your order!')

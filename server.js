@@ -292,7 +292,7 @@ app.get('/rest/saveLoginIp', saveLoginIp())
 app.post('/rest/data-export', imageCaptcha.verifyCaptcha())
 app.post('/rest/data-export', dataExport())
 app.get('/rest/languages', languageList())
-app.post('/rest/exportProfile', exportProfile())
+app.post('/rest/exportProfile', dataExport())
 
 /* NoSQL API endpoints */
 app.get('/rest/product/:id/reviews', showProductReviews())

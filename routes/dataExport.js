@@ -31,7 +31,6 @@ module.exports = function dataExport () {
           })
           userData.orders = orders
         }
-        res.status(200).send({ userData: JSON.stringify(userData, null, 2), confirmation: 'Your data export will open in a new Browser window.' })
       },
       () => {
         next(new Error(`Error retrieving orders for ${updatedEmail}`))

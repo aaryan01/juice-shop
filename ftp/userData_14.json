@@ -3,7 +3,7 @@
   "email": "aaryanbudhiraja2@gmail.com",
   "orders": [
     {
-      "orderId": "f744-654aec54d9883d60",
+      "orderId": "f744-6b8ed31ff7b0db7c",
       "totalPrice": 2.88,
       "products": [
         {
@@ -22,7 +22,22 @@
         }
       ],
       "bonus": 0,
-      "eta": "1"
+      "eta": "5"
+    },
+    {
+      "orderId": "f744-cc4550b6d80c3792",
+      "totalPrice": 2999,
+      "products": [
+        {
+          "quantity": 1,
+          "name": "Melon Bike (Comeback-Product 2018 Edition)",
+          "price": 2999,
+          "total": 2999,
+          "bonus": 300
+        }
+      ],
+      "bonus": 300,
+      "eta": "5"
     }
   ]
 }

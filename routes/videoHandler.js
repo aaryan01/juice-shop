@@ -7,7 +7,7 @@ const themes = require('../views/themes/themes').themes
 
 exports.getVideo = () => {
   return (req, res, next) => {
-    const path = 'frontend/src/assets/public/videos/JuiceShopJingle.mp4'
+    const path = videoPath()
     const stat = fs.statSync(path)
     const fileSize = stat.size
     const range = req.headers.range
@@ -21,6 +21,7 @@ exports.getVideo = () => {
         'Content-Range': `bytes ${start}-${end}/${fileSize}`,
         'Accept-Ranges': 'bytes',
         'Content-Length': chunksize,
+        'Content-Location': '/assets/public/videos/JuiceShopJingle.mp4',
         'Content-Type': 'video/mp4'
       }
       res.writeHead(206, head)
@@ -67,10 +68,25 @@ exports.promotionVideo = () => {
 }
 
 function getSubsFromFile () {
-  try {
-    var data = fs.readFileSync('frontend/dist/frontend/assets/public/subtitles/jingleSubtitles.vtt', 'utf8')
-    return data.toString()
-  } catch (e) {
-    console.log('Error:', e.stack)
+  let subtitles = 'JuiceShopJingle.vtt'
+  if (config && config.application && config.application.promotion && config.application.promotion.subtitles !== null) {
+    subtitles = config.application.promotion.subtitles
+    if (subtitles.substring(0, 4) === 'http') {
+      subtitles = decodeURIComponent(subtitles.substring(subtitles.lastIndexOf('/') + 1))
+    }
   }
+  const data = fs.readFileSync('frontend/dist/frontend/assets/public/videos/' + subtitles, 'utf8')
+  return data.toString()
+}
+
+function videoPath () {
+  if (config && config.application && config.application.promotion && config.application.promotion.video !== null) {
+    let video = config.application.promotion.video
+
+    if (video.substring(0, 4) === 'http') {
+      video = decodeURIComponent(video.substring(video.lastIndexOf('/') + 1))
+    }
+    return 'frontend/src/assets/public/videos/' + video
+  }
+  return 'frontend/src/assets/public/videos/JuiceShopJingle.mp4'
 }

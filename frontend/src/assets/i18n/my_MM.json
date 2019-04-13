@@ -17,6 +17,7 @@
   "MANDATORY_PASSWORD_REPEAT": "ေက်းဇူးျပဳ၍ လ်ွိဳ႕ဝွက္စကားလံုးအား ထပ္မံထည့္သြင္းပါ",
   "INVALID_PASSWORD_LENGTH": "လ်ိွဳ႕ဝွက္စကားလံုး ကို {{length}} ျဖည့္သြင္းေပးပါ",
   "LABEL_PASSWORD_REPEAT": "လ်ိွဳ႕ဝွက္စကားလံုး ထပ္မံျဖည့္သြင္းရန္",
+  "PASSWORDS_NOT_MATCHING": "Passwords do not match",
   "BTN_REGISTER": "အေကာင့္ ျပဳလုပ္ပါမည္",
   "TITLE_LOGOUT": "ထြက္မည္",
   "CONFIRM_LOGGED_OUT": "သင့္အေကာင့္မွ ထြက္ျပီးပါျပီ",
@@ -52,7 +53,7 @@
   "LABEL_NAME": "အမည္",
   "LABEL_DESCRIPTION": "ေဖာ္ျပခ်က္",
   "LABEL_PRICE": "ေစ်းႏွဳန္း",
-  "LABEL_BONUS": "ဆုငှေ",
+  "LABEL_BONUS": "Bonus",
   "LABEL_IMAGE": "ရုပ္ပံု",
   "TITLE_BASKET": "သင္၏ ျခင္းေတာင္း",
   "LABEL_QUANTITY": "အေရအတြက္",
@@ -170,5 +171,9 @@
   "PRIVACY_AND_SECURITY": "Privacy & Security",
   "MENU": "Menu",
   "BTN_SHOW_ALL": "Show all",
-  "BTN_HIDE_ALL": "Hide all"
+  "BTN_HIDE_ALL": "Hide all",
+  "TYPE_THESE_LETTERS": "Type these {{length}} letters",
+  "BTN_REQUEST": "Request",
+  "EXPORT_LABEL": "Export Format",
+  "ACCOUNT": "Account"
 }

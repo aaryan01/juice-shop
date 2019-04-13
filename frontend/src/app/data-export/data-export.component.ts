@@ -1,31 +1,13 @@
-<<<<<<< HEAD
-import { Component } from '@angular/core'
-import { environment } from '../../environments/environment'
-import { HttpClient } from '@angular/common/http'
-import { catchError, map } from 'rxjs/operators'
-=======
 import { Component, OnInit } from '@angular/core'
 import { FormControl, Validators } from '@angular/forms'
 import { ImageCaptchaService } from '../Services/image-captcha.service'
 import { DomSanitizer } from '@angular/platform-browser'
->>>>>>> upstream/develop
 
 @Component({
   selector: 'app-data-export',
   templateUrl: './data-export.component.html',
   styleUrls: ['./data-export.component.scss']
 })
-<<<<<<< HEAD
-export class DataExportComponent {
-
-  private hostServer = environment.hostServer
-  private host = this.hostServer + '/api/Users'
-
-  constructor (private http: HttpClient) { }
-
-  export () {
-    return this.http.get(this.hostServer + '/rest/exportProfile').pipe(map((response: any) => response), catchError((err) => { throw err }))
-=======
 export class DataExportComponent implements OnInit {
 
   public captchaControl: FormControl = new FormControl('', [Validators.required])
@@ -87,6 +69,5 @@ export class DataExportComponent implements OnInit {
     this.formatControl.markAsUntouched()
     this.formatControl.markAsPristine()
     this.formatControl.setValue('')
->>>>>>> upstream/develop
   }
 }
